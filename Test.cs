@@ -40,6 +40,9 @@ namespace mozillaTest
             driver.FindElement(By.Id("nethealth")).Click();
             System.Threading.Thread.Sleep(1000);
             Assert.True(driver.Url.Contains("https://internethealthreport.org/"));
+            driver.FindElement(By.XPath("/html/body/div[1]/main/div/div[2]/div[1]/a[2]")).Click();
+            System.Threading.Thread.Sleep(2000);
+            Assert.True(driver.Url.Contains("https://internethealthreport.org/v01/"));
         }
 
     }
